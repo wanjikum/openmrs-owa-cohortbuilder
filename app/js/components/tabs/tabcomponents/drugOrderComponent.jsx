@@ -23,10 +23,14 @@ class DrugOrderComponent extends Component {
                     <label htmlFor="drug" className="col-sm-2 control-label">Drug(s)</label>
                     <div className="col-sm-4">
                         <select className="form-control" multiple="multiple" id="drug" name="drug">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
+                            <option>drug 1</option>
+                            <option>drug 2</option>
+                            <option>drug 3</option>
+                            <option>drug 4</option>
+                            <option>drug 5</option>
+                            <option>drug 6</option>
+                            <option>drug 7</option>
+                            <option>drug 8</option>
                         </select>
                     </div>
                 </div>
@@ -38,48 +42,25 @@ class DrugOrderComponent extends Component {
                             <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/> Current Drug Regimen
                         </label>
                         <label className="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/> Specific Drug Regimen(s)
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/> All Drug Regimen(s)
                         </label>
                     </div>
                 </div>
 
                 <div className="form-group">
                     <label className="col-sm-2 control-label">When?</label>
-                    <div className="col-sm-2">
-                        <span className="inline-label">For the last:</span>
+                    <div className="">
+                        <span className="inline-label" id="for-the-last-label">For the last:</span>
                     </div>
                     <div className="col-sm-2">
                         <input className="form-control" type="text" name="month" />
                     </div>
-                    <span className="inline-label">months and :</span>
+                    <span className="inline-label">months and/or :</span>
                     <div className="col-sm-2">
                         <input className="form-control" name="days" type="text" />
                     </div>
                     <span className="inline-label">days    (optional)</span>
                 </div>
-                <div className="form-group">
-                    <div className="col-sm-offset-2 col-sm-6">
-                        <button type="submit" className="btn btn-success">Search</button>
-                        <button type="reset" className="btn btn-default cancelBtn">Reset</button>
-                    </div>
-                </div>
-                <h4 className="text-center">Patients who stopped or changed a drug</h4>
-                <form className="form-horizontal">
-                <div className="form-group">
-                    <label className="col-sm-2 control-label">When?</label>
-                    <div className="col-sm-2">
-                        <span className="inline-label">Within the last:</span>
-                    </div>
-                    <div className="col-sm-2">
-                        <input className="form-control" type="text" name="month" />
-                    </div>
-                    <span className="inline-label">months and :</span>
-                    <div className="col-sm-2">
-                        <input className="form-control" name="days" type="text" />
-                    </div>
-                    <span className="inline-label">days(optional)</span>
-                </div>
-                </form>
                 <div className="form-group">
                     <label className="col-sm-2 control-label">Date Range</label>
                     <div className="col-sm-1">
@@ -120,7 +101,7 @@ class DrugOrderComponent extends Component {
                     <div className="col-sm-2">
                         <input className="form-control" type="text" name="month" />
                     </div>
-                    <span className="inline-label">months and :</span>
+                    <span className="inline-label">month(s) and/or :</span>
                     <div className="col-sm-2">
                         <input className="form-control" name="days" type="text" />
                     </div>
@@ -152,33 +133,21 @@ class DrugOrderComponent extends Component {
                 <br/><br/>
                 <div className="form-group">
                     <div className="col-md-4">
-                        <p className="text-center">Reason(s) for change</p>
-                        <select className="form-control" multiple="multiple" id="drug" name="drug">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
+                        <p className="text-center">Reason(s) for stop/change</p>
+                        <textarea className="form-control" rows="4" placeholder="type here">
+                        </textarea>
                     </div>
 
                     <div className="col-md-4">
                         <p className="text-center">Only these drugs</p>
-                        <select className="form-control" multiple="multiple" id="drug" name="drug">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
+                        <textarea className="form-control" rows="4" placeholder="type here">
+                        </textarea>
                     </div>
 
                     <div className="col-md-4">
                         <p className="text-center">Only these generics</p>
-                        <select className="form-control" multiple="multiple" id="drug" name="drug">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
+                        <textarea className="form-control" rows="4" placeholder="type here">
+                        </textarea>
                     </div>
                 </div>
                 <div className="form-group">
